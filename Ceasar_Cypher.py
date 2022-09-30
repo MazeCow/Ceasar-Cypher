@@ -3,7 +3,7 @@ from sys import *
 from tkinter import filedialog
 from time import *
 import string
-
+#edited locally
 time = ""
 def currentTime():
     codedTime = str(ctime())
@@ -18,6 +18,8 @@ window2.geometry("100x300")
 Cypherable = "abcdefghijklmnopqrstuvwxyz0123456789"
 global finalstring
 finalstring = "hold"
+window2.resizable(TRUE, FALSE)
+window.resizable(FALSE, FALSE)
 #-------------------------------------------------------------------------
 #Defining cypher function
 def cypher(key, string1):
@@ -130,8 +132,8 @@ encodeButton = Button(frame1, text="encode", width=25, command=encodeButton)
 decodeButton = Button(frame1, text="decode", width=25, command=decodeButton)
 encodeButton.grid(row=0, column=0)
 decodeButton.grid(row=0, column=1)
-saveButton = Button(frame1, text="Save Cypher To File", width=25, command=writeCypher)
-openButton = Button(frame1, text="Open Cypher Text File", width=25, command=browseFiles)
+saveButton = Button(frame1, text="Save Cypher To File", width=25, fg="black", bg="lightgray", command=writeCypher)
+openButton = Button(frame1, text="Open Cypher Text File", width=25, fg="black", bg="lightgray",command=browseFiles)
 saveButton.grid(row=1, column = 0)
 openButton.grid(row=1, column = 1)
 frame1.grid(row=2, column=0)
